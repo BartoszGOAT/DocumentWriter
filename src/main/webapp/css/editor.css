@@ -1,0 +1,141 @@
+/* Editor Layout */
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-right: 1px solid #dbdbdb;
+}
+
+.editor-header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.editor-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.editor-status {
+    background-color: #f5f5f5;
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+#status.has-text-success {
+    color: #23d160;
+}
+
+#status.has-text-danger {
+    color: #ff3860;
+}
+
+#lastSaved {
+    font-style: italic;
+}
+
+/* Editor Textarea */
+#editor {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#editor:focus {
+    outline: none;
+}
+
+/* Chat Layout */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-left: 1px solid #dbdbdb;
+}
+
+.chat-header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.chat-input {
+    background-color: #f5f5f5;
+    border-top: 1px solid #dbdbdb;
+}
+
+/* Chat Messages */
+.chat-message {
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.chat-message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+}
+
+.chat-username {
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.chat-time {
+    color: #7a7a7a;
+}
+
+.chat-message-content {
+    word-wrap: break-word;
+}
+
+.system-message {
+    background-color: #effaf3;
+    color: #257942;
+    font-style: italic;
+    text-align: center;
+    padding: 0.25rem;
+}
+
+/* Online Users */
+#onlineUsers .tag {
+    margin-right: 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .columns.is-gapless {
+        flex-direction: column;
+    }
+    
+    .column.is-9, .column.is-3 {
+        width: 100%;
+    }
+    
+    .chat-container {
+        height: 30vh;
+        border-left: none;
+        border-top: 1px solid #dbdbdb;
+    }
+    
+    .editor-container {
+        height: 70vh;
+        border-right: none;
+    }
+}
